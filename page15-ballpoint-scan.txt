@@ -1,0 +1,249 @@
+                         PAGE 15
+            ULTIMATE REVISION — FORMULAS, TRAPS & CHECKLIST
+                      SETS & RELATIONS
+
+
+[Blue] 1) Set notation and subset facts
+
+A = {x : P(x)}
+ x ∈ A                ; x is in A
+ x ∉ A                ; x is not in A
+ ∅                    ; empty set
+ U                    ; universal set
+
+A ⊆ B  iff  (x ∈ A ⇒ x ∈ B)
+A = B  iff  A ⊆ B and B ⊆ A
+
+Facts:
+• ∅ ⊆ A for every set A
+• A ⊆ A
+• if A ⊆ B and B ⊆ C, then A ⊆ C
+
+Useful identities:
+A − B = A ∩ B′
+A′ = U \ A
+(A′)′ = A
+A ∩ A′ = ∅
+A ∪ A′ = U
+
+
+[Blue] 2) Number of subsets, proper subsets and power set
+
+If |A| = n, then:
+• total subsets = 2^n
+• proper subsets = 2^n − 1
+• power set P(A) has |P(A)| = 2^n
+
+Also:
+• non-empty subsets = 2^n − 1
+• singleton subsets = n
+• 2-element subsets = nC2
+
+
+[Blue] 3) Set operation identities and De Morgan's laws
+
+A ∩ B = {x : x ∈ A and x ∈ B}
+A ∪ B = {x : x ∈ A or x ∈ B}
+A \ B = A ∩ B′
+
+Laws:
+A ∪ ∅ = A                    A ∩ U = A
+A ∩ ∅ = ∅                    A ∪ U = U
+A ∪ A = A                    A ∩ A = A
+A ∪ B = B ∪ A                A ∩ B = B ∩ A
+
+Distributive laws:
+A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)
+A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)
+
+De Morgan's laws:
+(A ∪ B)′ = A′ ∩ B′
+(A ∩ B)′ = A′ ∪ B′
+
+General form:
+(∪ A_i)′ = ∩ A_i′
+(∩ A_i)′ = ∪ A_i′
+
+
+[Blue] 4) Two-set and three-set inclusion–exclusion
+
+Two sets:
+|A ∪ B| = |A| + |B| − |A ∩ B|
+
+Three sets:
+|A ∪ B ∪ C|
+= |A| + |B| + |C|
+  − |A ∩ B| − |B ∩ C| − |C ∩ A|
+  + |A ∩ B ∩ C|
+
+Also:
+|A \ B| = |A| − |A ∩ B|
+|A Δ B| = |A| + |B| − 2|A ∩ B|
+
+
+[Blue] 5) Cartesian product cardinality
+
+A × B = {(a, b) : a ∈ A, b ∈ B}
+
+If |A| = m and |B| = n, then:
+|A × B| = mn
+
+Hence:
+|A × A| = n^2
+|A × B × C| = |A||B||C|
+
+Also:
+A × (B ∪ C) = (A × B) ∪ (A × C)
+A × (B ∩ C) = (A × B) ∩ (A × C)
+
+
+[Blue] 6) Domain, codomain, range and inverse relations
+
+A relation R from A to B is a subset of A × B.
+
+Domain(R) = {a ∈ A : ∃ b ∈ B with (a,b) ∈ R}
+Codomain(R) = B
+Range(R) = {b ∈ B : ∃ a ∈ A with (a,b) ∈ R}
+
+Inverse relation:
+R⁻¹ = {(b,a) : (a,b) ∈ R}
+
+So:
+Domain(R⁻¹) = Range(R)
+Range(R⁻¹) = Domain(R)
+
+
+[Blue] 7) Number of relations
+
+Let |A| = n.
+
+Total relations on A:
+2^(n^2)
+
+Reflexive relations:
+2^(n(n−1))
+
+Irreflexive relations:
+2^(n(n−1))
+
+Symmetric relations:
+2^n · 2^(n(n−1)/2)
+= 2^(n(n+1)/2)
+
+Antisymmetric relations:
+2^n · 3^(n(n−1)/2)
+
+If relation is from A to B with |A| = m, |B| = n:
+Total relations = 2^(mn)
+
+
+[Blue] 8) Definitions of relation types
+
+Reflexive:
+(a,a) ∈ R for every a ∈ A
+
+Irreflexive:
+(a,a) ∉ R for every a ∈ A
+
+Symmetric:
+(a,b) ∈ R ⇒ (b,a) ∈ R
+
+Asymmetric:
+(a,b) ∈ R ⇒ (b,a) ∉ R
+
+Antisymmetric:
+(a,b) ∈ R and (b,a) ∈ R ⇒ a = b
+
+Transitive:
+(a,b) ∈ R and (b,c) ∈ R ⇒ (a,c) ∈ R
+
+Quick distinctions:
+• symmetric ≠ antisymmetric
+• asymmetric ⇒ irreflexive
+• reflexive + symmetric + transitive = equivalence relation
+• reflexive + antisymmetric + transitive = partial order
+
+
+[Blue] 9) Equivalence relation and equivalence-class properties
+
+A relation ~ on A is an equivalence relation iff:
+• reflexive
+• symmetric
+• transitive
+
+Equivalent class of a:
+[a] = {x ∈ A : x ~ a}
+
+Properties:
+• a ∈ [a]
+• [a] = [b] iff a ~ b
+• if [a] ≠ [b], then [a] ∩ [b] = ∅
+• union of all classes = A
+
+Hence, equivalence classes partition A.
+
+
+[Blue] 10) Partial orders, posets, minimal/maximal and least/greatest
+
+Partial order ≤ on A:
+• reflexive
+• antisymmetric
+• transitive
+
+Poset = (A, ≤)
+
+Minimal element:
+no element is strictly smaller than it
+
+Maximal element:
+no element is strictly larger than it
+
+Least element:
+x ≤ a for every a ∈ A
+
+Greatest element:
+a ≤ y for every a ∈ A
+
+Important:
+• least ⇒ minimal
+• greatest ⇒ maximal
+• minimal need not be least
+• maximal need not be greatest
+• least/greatest, if exist, are unique
+
+
+[Blue] 11) Ten common JEE Advanced traps
+
+1. ∅ ⊆ A always; never say “∅ ∈ A” unless given.
+2. A − B = A ∩ B′, not B − A.
+3. A ⊆ B and B ⊆ A ⇒ A = B, not just same size.
+4. A × (B ∪ C) = (A × B) ∪ (A × C).
+5. Reflexive means every element relates to itself.
+6. Symmetric and antisymmetric are different.
+7. Asymmetric ⇒ irreflexive, but converse not always.
+8. [a] = {x : x ~ a}, not “same property / same size”.
+9. Minimal ≠ least; maximal ≠ greatest.
+10. Inclusion–exclusion must include triple intersection term.
+
+
+[Red] 12) Final checklist
+“Can I solve this without looking at the notes?”
+
+• Did I write the set definitions correctly?
+• Did I distinguish A \ B, A ∩ B, A ∪ B, A′?
+• Did I check ∅ and U edge cases?
+• Did I use correct counting formulas?
+• Did I apply De Morgan carefully?
+• Did I include all terms in inclusion–exclusion?
+• Did I identify relation type from definitions?
+• Did I check loops / diagonal entries?
+• Did I distinguish equivalence class vs partition?
+• Did I separate least/greatest from minimal/maximal?
+• If I hide the notes, could I still reason?
+
+[Red underline] FINAL RULE
+“ALL / EVERY / FOR ALL” → check reflexivity first.
+“BOTH / EITHER–OR / INCLUSION” → check set identities.
+“RELATION TYPE?” → test definitions one by one.
+
+                              END OF PAGE 15
